@@ -83,9 +83,12 @@ When running with wireshark, root privileges may be required.
 * `find_locks.py` - Examines the network traffic on a channel to determine if device behavior looks like a lock. Displays which devices it thinks are locks.
 * `insecure_rejoin.py` - Runs an insecure rejoin attempt on the target network.
 * `listen.py` - Listens on a channel piping all output to wireshark for viewing.
+* `replay.py` - Transmits all packets of a target pcap file with a user defined delay.
 * `scan.py` - Moves between channels listening and piping the data to wireshark for viewing.
 * `unlock.py` - Attempts to unlock a target lock
 
 ## Notes
 
 The patterns used by ZigDiggity version 2 are designed to be as reliable as possible. The tool is still in fairly early stages of development, so expect to see improvements over time.
+
+ZigDiggity has been extended by Jeroen Lammers in order to more easily facilitate the transmission of custom packets. Examples of custom packets can be found in `.\packet_constructor\packets\`. We used these packets to test if the network key lifetime recommendation from ZigBee revision 21 paragraph 4.7.3.9.2. More details can be found in the [report (not yet available)](). 
